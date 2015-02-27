@@ -202,7 +202,7 @@ func (sub *EtcdSubnetRegistry) GetSubnets() (*[]Subnet, error) {
 		}
 		subnets = append(subnets, s)
 	}
-	return &subnets, err
+	return &subnets, nil
 }
 
 func (sub *EtcdSubnetRegistry) GetSubnet(minionip string) (*Subnet, error) {
